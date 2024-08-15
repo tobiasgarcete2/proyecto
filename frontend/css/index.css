@@ -1,0 +1,105 @@
+body {
+    background-color: #f8f9fa;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-custom {
+    background-color: #00ff0d32;
+    position: fixed;
+    background-size: cover;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .navbar-brand {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.navbar-custom .navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.search-bar {
+    margin: 80px auto 20px; /* Ajustar el margen superior para que no se superponga con la navbar */
+    width: 50%;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#conteiner {
+    margin: auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.job-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.job-card h3 {
+    margin: 15px 0 10px;
+}
+
+.job-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+footer {
+    background-color: #4e4d4d;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

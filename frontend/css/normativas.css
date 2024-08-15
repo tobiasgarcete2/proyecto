@@ -1,0 +1,30 @@
+
+      body {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+        .navbar-custom {
+            background-color: #00ff0d32;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .search-bar {
+            margin: 20px 0;
+        }
+        .job-card {
+            margin-bottom: 20px;
+        }
+        .row{
+            display: flex;
+            width: 80%;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            row-gap: 30px;
+            column-gap: 20px;
+            margin: auto;
+        }
