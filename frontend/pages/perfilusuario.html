@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="../css/inscripcion.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../js/cv.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Crear CV</h2>
+        <div class="form-group">
+            <label for="habilidades">Habilidades</label>
+            <input type="text" id="habilidades" name="habilidades" required>
+        </div>
+        <div class="form-group">
+            <label for="estudios">Mis estudios</label>
+            <input type="text" id="estudios" name="estudios" required>
+        </div>
+        <div class="form-group">
+            <label for="idiomas">Idiomas</label>
+            <input type="text" id="idiomas" name="idiomas" required>
+        </div>
+        <div class="form-group">
+            <label for="foto">Foto</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+        </div>
+        <button type="button" id="crearCVButton">Crear CV</button>
+        <p>¿No tienes una cuenta? <a href="../pages/registro.html">Regístrate aquí</a></p>
+    </div>
+
+    <script>
+        // Función para obtener los datos del formulario
+        function obtenerDatosFormulario() {
+            return {
+                habilidades: document.getElementById('habilidades').value,
+                estudios: document.getElementById('estudios').value,
+                idiomas: document.getElementById('idiomas').value
+            };
+        }
+
+        // Función para generar el PDF del CV
+        function generarCV() {
+            const datos = obtenerDatosFormulario();
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Configuración básica del PDF
+            doc.setFontSize(16);
+            doc.text(`Currículum Vitae`, 10, 10);
+            doc.setFontSize(12);
+            doc.text(`Habilidades: ${datos.habilidades}`, 10, 20);
+            doc.text(`Estudios: ${datos.estudios}`, 10, 30);
+            doc.text(`Idiomas: ${datos.idiomas}`, 10, 40);
+
+            // Guardar el PDF
+            doc.save(`mi-cv.pdf`);
+        }
+
+        // Asignar la función al botón "Crear CV"
+        document.getElementById('crearCVButton').addEventListener('click', generarCV);
+    </script>
+</body>
+</html>

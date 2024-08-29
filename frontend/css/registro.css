@@ -1,28 +1,88 @@
+/* Estilos Generales */
 body {
-    background-image: url(../img/background.jpg);
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #e8e9b7;
+    margin: 0; /* Asegura que el cuerpo no tenga márgenes */
+    padding: 0;
 }
 
+/* Estilos para la Navbar */
+.navbar-custom {
+    background-color: #00000032;
+    position: fixed; /* Fija la navbar en la parte superior */
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+/* Estilo para la Marca de la Navbar */
+.navbar-custom .navbar-brand {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Estilo para los Items de Navegación */
+.navbar-custom .navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo para los Links de Navegación */
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Estilos para el Contenido Debajo de la Navbar */
+#conteiner, .search-bar, .login-container, .signup-container {
+    margin-top: 80px; /* Margen superior para evitar que el contenido se superponga con la navbar */
+}
+
+/* Estilos para la Barra de Búsqueda */
+.search-bar {
+    width: 50%;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para el Contenedor Principal */
+#conteiner {
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Estilos para los Contenedores de Login y Registro */
 .login-container, .signup-container {
     background: white;
-    padding: 40px;
+    padding: 40px; /* Ajustado para una mejor proporción */
+    margin: auto;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 400px;
 }
 
+/* Estilo para los Encabezados */
 h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
 }
 
+/* Estilos para el Formulario */
 .form-group {
     margin-bottom: 20px;
 }
@@ -42,6 +102,7 @@ h2 {
     box-sizing: border-box;
 }
 
+/* Estilo para los Botones */
 button {
     width: 100%;
     padding: 12px;
@@ -58,11 +119,13 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Estilos para los Párrafos */
 p {
     text-align: center;
     margin-top: 20px;
 }
 
+/* Estilo para los Enlaces */
 a {
     color: #007bff;
     text-decoration: none;
@@ -70,4 +133,61 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+/* Estilos para la Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo para el Logo en la Navbar */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    width: 40px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.navbar-brand:hover {
+    color: #ddd;
+}
+
+/* Estilos para los Items de Navegación */
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #575757;
 }

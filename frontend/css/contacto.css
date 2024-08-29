@@ -8,6 +8,8 @@ body {
 
 .navbar-custom {
     background-color: #00ff0d32;
+    align-items: center;
+    padding: 0%;
     
 }
 .navbar-brand{
